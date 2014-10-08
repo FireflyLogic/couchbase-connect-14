@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{6A750EF4-9C47-44A5-8A78-E6601057C94F}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>CouchbaseConnect2014</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Agenda.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Contact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Day.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Session.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Slot.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Tweet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UserSession.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ICouchbaseService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ITimeService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Repository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\TimeService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LiveQueryObservableCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TinyIoC.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ITwitterService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\TwitterService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\DateTime_TimeSince.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Speaker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\AggregateRoot.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Schedule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ICouchbaseUserService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\CouchbaseUserService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CouchbaseUser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ContactExchange.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\Object_ToDictionary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\IDictionary_ToObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\AppConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ConferenceSurveyResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SessionRatingResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ContactProxy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ScavengerHuntItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ScavengerHuntCapture.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ScavengerHuntView.cs" />
+  </ItemGroup>
+</Project>

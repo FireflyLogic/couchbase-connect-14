@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="scandit">
+  <name>Scandit Barcode Scanner SDK</name>
+  <publisher>Scandit</publisher>
+  <publisher-url>http://www.scandit.com</publisher-url>
+  <version>4.1.0</version>
+  <summary>Enterprise-Grade Barcode Scanning for your Mobile App</summary>
+  <samples>
+    <sample id="AndroidDemo">
+      <name>Android barcode scanner demo app</name>
+      <summary>Android barcode scanner demo app</summary>
+    </sample>
+    <sample id="iOSDemo">
+      <name>iOS barcode scanner demo app</name>
+      <summary>iOS barcode scanner demo app</summary>
+    </sample>
+  </samples>
+</component>

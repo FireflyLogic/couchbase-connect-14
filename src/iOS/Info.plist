@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>com.couchbase.connect</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>MinimumOSVersion</key>
+	<string>7.0</string>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+	</array>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Fonts/OpenSans-Light.ttf</string>
+		<string>Fonts/OpenSans-Regular.ttf</string>
+		<string>Fonts/OpenSans-Bold.ttf</string>
+		<string>Fonts/OpenSans-LightItalic.ttf</string>
+	</array>
+	<key>CFBundleDisplayName</key>
+	<string>Connect 2014</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>icon_120</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>2014.10.03.6</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1.1</string>
+</dict>
+</plist>

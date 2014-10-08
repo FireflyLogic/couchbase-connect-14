@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{4ABECB1E-551F-4511-B3B9-79B0A129C123}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>CouchbaseConnect2014.Tests</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Sanity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AgendaViewModelTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mocks\MockTimeService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mocks\MockRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AgendaDayViewModelTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProfileViewModelTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HomeViewModelTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MenuViewModelTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FullScheduleViewModelTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EditProfileViewModelTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\TwitterServiceTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mocks\MockTwitterService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\CouchbaseUserServiceTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Object_ToDictionaryTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\IDictionary_ToObjectTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ImageCropLogicTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ImageResizerServiceTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Mocks\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{8FCD9B6F-5031-4342-BF20-2957B0609C18}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>CouchbaseConnect2014</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CarouselLayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\DayHeader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\FontLabel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\MenuCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\PipSet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\RatingStar.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\RoundedImageView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\SessionItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueConverters\BooleanToColorValueConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueConverters\BooleanToTextValueConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueConverters\DateTimeValueConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueConverters\JobTitleConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueConverters\NegateValueConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueConverters\ToUpperValueConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueConverters\TrackBackgroundColorConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueConverters\TrackTextColorConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueConverters\TrackValueConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AgendaCellViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AgendaDayViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AgendaViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ChooseSessionViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ConferenceSurveyViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ContactCellViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ContactsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EditProfileViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FiltersViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FullScheduleCellViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FullScheduleDayViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FullScheduleSessionGroup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FullScheduleViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HomeViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MenuItemViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MenuViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProfileViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RootViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ScavengerHuntViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SessionRatingViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AgendaCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AgendaDayPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AgendaDayView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AgendaView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ChooseSessionView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ConferenceSurveyView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ContactHeaderCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ContactsView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ContactView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\EditProfileView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FiltersView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FullScheduleCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FullScheduleDayItemView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FullScheduleDayView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FullScheduleView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\HomeCurrentSessionView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\HomeView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MenuView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ProfileView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\QrCodeScannerView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\RootView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ScavengerHuntView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\SessionInfoView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\FontEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RateSessionViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\RateSessionView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CommentEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FiltersCellViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FiltersCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\RateButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SessionInfoViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\FiveStarRatingView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueConverters\BooleanToImageConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\SingleOptionRatingView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\RatingRadioButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MultipleOptionRatingView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\RatingCheckbox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\QrCodeScannerViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FullScheduleHeaderCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ContactViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\ContactCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueConverters\BooleanToAlphaConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ScavengerHuntCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ScavengerHuntCellViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueConverters\ScavengerHuntHeaderConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ScavengerHuntCaptureView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ScavengerHuntCaptureViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ScavengerHuntCameraView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\CameraContentPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HomeCurrentSessionViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ImageCropLogic.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TweetCellViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IImageResizerService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueConverters\ByteArrayToImageSourceConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CaptureStatistics.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ValueConverters\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Controls\" />
+    <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Colors.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fonts.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TrackColorScheme.cs" />
+  </ItemGroup>
+</Project>

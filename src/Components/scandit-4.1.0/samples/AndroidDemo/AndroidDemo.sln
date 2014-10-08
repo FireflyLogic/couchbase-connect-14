@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidDemo", "AndroidDemo\AndroidDemo.csproj", "{1BB074B0-20CF-4F86-A928-2132C20B947C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BB074B0-20CF-4F86-A928-2132C20B947C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BB074B0-20CF-4F86-A928-2132C20B947C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BB074B0-20CF-4F86-A928-2132C20B947C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BB074B0-20CF-4F86-A928-2132C20B947C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7F8EC98-3D9D-4337-BE2D-4BDA80D43EF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7F8EC98-3D9D-4337-BE2D-4BDA80D43EF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7F8EC98-3D9D-4337-BE2D-4BDA80D43EF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F8EC98-3D9D-4337-BE2D-4BDA80D43EF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = AndroidDemo\AndroidDemo.csproj
+	EndGlobalSection
+EndGlobal

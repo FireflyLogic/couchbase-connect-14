@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <TextView
+        android:layout_width="224dp"
+        android:layout_height="70dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical|left"
+        android:visibility="gone"
+        android:id="@+id/title" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        android:id="@+id/track" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_toLeftOf="@id/track"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        android:id="@+id/location" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_vertical"
+        android:paddingRight="5dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/timelabel" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/timelabel"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_vertical"
+        android:paddingBottom="10dp"
+        android:id="@+id/time" />
+    <ImageView
+        android:src="@drawable/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        android:id="@+id/image" />
+    <TextView
+        android:text="Choose a Session"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/image"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="20dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        android:id="@+id/choose" />
+</RelativeLayout>

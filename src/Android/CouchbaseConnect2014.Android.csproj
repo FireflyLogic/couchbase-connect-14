@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{03C12A95-5689-4CA2-A931-DC85809D8AB5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CouchbaseConnect2014.Android</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AssemblyName>CouchbaseConnect2014.Android</AssemblyName>
+    <TargetFrameworkVersion>v4.2</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+    <DefineConstants>USE_COUCHBASE_SERVER</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.Forms.Platform.Android">
+      <HintPath>..\packages\Xamarin.Forms.1.2.2.6243\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.1.2.2.6243\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.1.2.2.6243\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.NUnitLite" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="ZXing.Net.Mobile">
+      <HintPath>..\Components\zxing.net.mobile-1.4.6\lib\android\ZXing.Net.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.monoandroid">
+      <HintPath>..\Components\zxing.net.mobile-1.4.6\lib\android\zxing.monoandroid.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCL.raw">
+      <HintPath>..\packages\SQLitePCL.raw_needy.0.6.0\lib\MonoAndroid\SQLitePCL.raw.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCL.ugly">
+      <HintPath>..\packages\SQLitePCL.ugly.0.6.1\lib\portable-net45+netcore45+wp8+MonoAndroid10+MonoTouch10\SQLitePCL.ugly.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Mobile">
+      <HintPath>..\Components\xamarin.mobile-0.7.1\lib\android\Xamarin.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v13">
+      <HintPath>..\packages\Xamarin.Android.Support.v13.20.0.0.4\lib\MonoAndroid32\Xamarin.Android.Support.v13.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.20.0.0.4\lib\MonoAndroid32\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="ScanditSDK">
+      <HintPath>..\Components\scandit-4.1.0\lib\android\ScanditSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Couchbase.Lite">
+      <HintPath>..\packages\Couchbase.Lite.0.9.7.1\lib\MonoAndroid\Couchbase.Lite.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderers\CarouselLayoutRenderer.cs" />
+    <Compile Include="Renderers\QrCodeScannerViewRenderer.cs" />
+    <Compile Include="Renderers\FontLabelRenderer.cs" />
+    <Compile Include="Renderers\RoundedImageRenderer.cs" />
+    <Compile Include="Renderers\RateButtonRenderer.cs" />
+    <Compile Include="Renderers\FontEntryRenderer.cs" />
+    <Compile Include="Renderers\CommentEditorRenderer.cs" />
+    <Compile Include="Renderers\AgendaCellRenderer.cs" />
+    <Compile Include="Renderers\FullScheduleCellRenderer.cs" />
+    <Compile Include="Renderers\ScavengerHuntCameraViewRenderer.cs" />
+    <Compile Include="Views\RoundedImageView.cs" />
+    <Compile Include="SplashScreen.cs" />
+    <Compile Include="Renderers\CameraContentPageRenderer.cs" />
+    <Compile Include="CameraActivity.cs" />
+    <Compile Include="Renderers\ScavengerHuntCellRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\values\Style.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\back.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\compose.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\plus.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\back.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\compose.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\plus.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\back.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\compose.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\plus.png" />
+    <AndroidResource Include="Resources\drawable\pip.png" />
+    <AndroidResource Include="Resources\drawable\pip_selected.png" />
+    <AndroidResource Include="Resources\drawable\rateButton.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\fadeout.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\fadeout.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\fadeout.png" />
+    <AndroidResource Include="Resources\drawable\qr.png" />
+    <AndroidResource Include="Resources\drawable\filter.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\check_box_off.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\check_box_on.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\QR.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\star_off.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\star_on.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\check_box_off.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\check_box_on.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\QR.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\check_box_off.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\check_box_on.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\QR.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\star_off.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\star_on.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\star_off.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\star_on.png" />
+    <AndroidResource Include="Resources\drawable\temp_add_contact.png" />
+    <AndroidResource Include="Resources\drawable\temp_circlePic.png" />
+    <AndroidResource Include="Resources\drawable\temp_radio_off.png" />
+    <AndroidResource Include="Resources\drawable\temp_radio_on.png" />
+    <AndroidResource Include="Resources\drawable\temp_slideout.png" />
+    <AndroidResource Include="Resources\drawable\temp_twitterIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\check_black.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\radio_off.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\radio_off_black.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\radio_on.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\check_black.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\radio_off.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\radio_off_black.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\radio_on.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\check_black.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\radio_off.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\radio_off_black.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\radio_on.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\surveyShirt.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\surveyShirt.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\surveyShirt.png" />
+    <AndroidResource Include="Resources\layout\AgendaCell.axml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\filter_0.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\filter_1.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\filter_2.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\filter_3.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\filter_4.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\filter_5.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\filter_6.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\filter_0.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\filter_1.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\filter_2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\filter_3.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\filter_4.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\filter_5.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\filter_6.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\filter_0.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\filter_1.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\filter_2.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\filter_3.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\filter_4.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\filter_5.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\filter_6.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\add_pic.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\camera_small.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\add_pic.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\camera_small.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\add_pic.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\camera_small.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\camera_large.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\camera_large.png" />
+    <AndroidResource Include="Resources\layout\FullScheduleCell.axml" />
+    <AndroidResource Include="Resources\drawable\SplashScreen.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\comingSoon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\comingSoon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\comingSoon.png" />
+    <AndroidResource Include="Resources\layout\ScavengerHuntCell.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\splash.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\splash.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\splash.9.png" />
+  </ItemGroup>
+  <Import Project="..\CouchbaseConnect2014.Tests\CouchbaseConnect2014.Tests.projitems" Label="Shared" Condition="Exists('..\CouchbaseConnect2014.Tests\CouchbaseConnect2014.Tests.projitems')" />
+  <Import Project="..\Shared.Back\Shared.Back.projitems" Label="Shared" Condition="Exists('..\Shared.Back\Shared.Back.projitems')" />
+  <Import Project="..\Shared.Front\Shared.Front.projitems" Label="Shared" Condition="Exists('..\Shared.Front\Shared.Front.projitems')" />
+  <Import Project="..\Platform.Android\Platform.Android.projitems" Label="Shared" Condition="Exists('..\Platform.Android\Platform.Android.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
+  <ItemGroup>
+    <Folder Include="Renderers\" />
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Views\" />
+    <XamarinComponentReference Include="scandit">
+      <Version>4.1.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="zxing.net.mobile">
+      <Version>1.4.6</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamarin.mobile">
+      <Version>0.7.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\OpenSans-Light.ttf" />
+    <AndroidAsset Include="Assets\OpenSans-Regular.ttf" />
+    <AndroidAsset Include="Assets\OpenSans-Bold.ttf" />
+    <AndroidAsset Include="Assets\OpenSans-LightItalic.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\couchbase-connect.cblite" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\drawable-mdpi\temp_selfie.jpg" />
+  </ItemGroup>
+</Project>
