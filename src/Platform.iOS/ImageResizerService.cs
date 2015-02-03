@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Drawing;
-using MonoTouch.CoreGraphics;
-using MonoTouch.UIKit;
-using MonoTouch.Foundation;
+using CoreGraphics;
+using UIKit;
+using Foundation;
 
 namespace CouchbaseConnect2014.Services
 {
@@ -15,7 +15,7 @@ namespace CouchbaseConnect2014.Services
 			using (var data = NSData.FromArray (imageBytes)) {
 				using (UIImage image = new UIImage (data)) {
 
-					var cropRect = ImageCropLogic.GetLargestSquareFromRectangle (image.Size);
+                    var cropRect = (CGRect)ImageCropLogic.GetLargestSquareFromRectangle ((SizeF)image.Size);
 					var cropped = CropImage(image, cropRect);
 					var resized = ResizeImage (cropped, newWidth, newHeight);
 
@@ -31,22 +31,22 @@ namespace CouchbaseConnect2014.Services
 		// resize the image (without trying to maintain aspect ratio)
 		UIImage ResizeImage(UIImage sourceImage, float width, float height)
 		{
-			UIGraphics.BeginImageContext(new SizeF(width, height));
-			sourceImage.Draw(new RectangleF(0, 0, width, height));
+			UIGraphics.BeginImageContext(new CGSize(width, height));
+			sourceImage.Draw(new CGRect(0, 0, width, height));
 			var resultImage = UIGraphics.GetImageFromCurrentImageContext();
 			UIGraphics.EndImageContext();
 			return resultImage;
 		}
 
 		// crop the image, without resizing
-		UIImage CropImage(UIImage sourceImage, RectangleF rect)
+		UIImage CropImage(UIImage sourceImage, CGRect rect)
 		{
 			var imgSize = sourceImage.Size;
-			UIGraphics.BeginImageContext(new SizeF(rect.Width, rect.Height));
+			UIGraphics.BeginImageContext(new CGSize(rect.Width, rect.Height));
 			var context = UIGraphics.GetCurrentContext();
-			var clippedRect = new RectangleF(0, 0, rect.Width, rect.Height);
+			var clippedRect = new CGRect(0, 0, rect.Width, rect.Height);
 			context.ClipToRect(clippedRect);
-			var drawRect = new RectangleF(-rect.X, -rect.Y, imgSize.Width, imgSize.Height);
+			var drawRect = new CGRect(-rect.X, -rect.Y, imgSize.Width, imgSize.Height);
 			sourceImage.Draw(drawRect);
 			var modifiedImage = UIGraphics.GetImageFromCurrentImageContext();
 			UIGraphics.EndImageContext();

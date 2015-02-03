@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using CouchbaseConnect2014.Controls;
 using CouchbaseConnect2014.iOS;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using System.ComponentModel;
 
 

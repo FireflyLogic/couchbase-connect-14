@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms;
 using CouchbaseConnect2014.Views;
 using CouchbaseConnect2014.iOS.Renderers;
-using MonoTouch.UIKit;
+using UIKit;
 using CouchbaseConnect2014.ViewModels;
-using System.Drawing;
+using CoreGraphics;
 using CouchbaseConnect2014.ValueConverters;
 using System.Globalization;
 using System.Reflection;
@@ -23,7 +23,7 @@ namespace CouchbaseConnect2014.iOS.Renderers
         const int TimeWidth = 64;
         const int PlusTop = 65;
 
-        public override UITableViewCell GetCell (Cell item, UITableView tv)
+        public override UITableViewCell GetCell (Cell item, UITableViewCell reusableItem, UITableView tv)
         {
             var viewModel = (AgendaCellViewModel)item.BindingContext;
             var cellTableViewCell = tv.DequeueReusableCell ("cell") as CellTableViewCell
@@ -57,7 +57,7 @@ namespace CouchbaseConnect2014.iOS.Renderers
         UIView CreateAddIcon ()
         {
             return new UIImageView {
-                Frame = new RectangleF {
+                Frame = new CGRect {
                     X = Padding,
                     Y = PlusTop,
                     Width = 20,
@@ -70,7 +70,7 @@ namespace CouchbaseConnect2014.iOS.Renderers
         UIView CreateChooseLabel ()
         {
             return new UILabel {
-                Frame = new RectangleF {
+                Frame = new CGRect {
                     X = Padding + 30, 
                     Y = PlusTop,
                     Width = TitleWidth - 40,
@@ -82,7 +82,7 @@ namespace CouchbaseConnect2014.iOS.Renderers
             };
         }
 
-        UIView CreateBackgroundView (RectangleF bounds, AgendaCellViewModel viewModel)
+        UIView CreateBackgroundView (CGRect bounds, AgendaCellViewModel viewModel)
         {
             return new UIView {
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight,
@@ -98,7 +98,7 @@ namespace CouchbaseConnect2014.iOS.Renderers
             var label = new UILabel {
                 Text = viewModel.Title,
                 TextColor = textColor,
-                Frame = new RectangleF {
+                Frame = new CGRect {
                     X = Padding,
                     Y = Padding,
                     Width = TitleWidth,
@@ -117,7 +117,7 @@ namespace CouchbaseConnect2014.iOS.Renderers
             var label = new UILabel {
                 Text = viewModel.Location.ToUpper (),
                 TextColor = textColor,
-                Frame = new RectangleF {
+                Frame = new CGRect {
                     X = Padding,
                     Y = Padding + TitleHeight,
                     Width = TitleWidth / 2,
@@ -134,7 +134,7 @@ namespace CouchbaseConnect2014.iOS.Renderers
             var label = new UILabel {
 				Text = new TrackValueConverter().Convert(viewModel.Track, typeof(string), null, CultureInfo.CurrentCulture) as string,
                 TextColor = textColor,
-                Frame = new RectangleF {
+                Frame = new CGRect {
                     X = Padding + TitleWidth / 2,
                     Y = Padding + TitleHeight,
                     Width = TitleWidth / 2,
@@ -151,7 +151,7 @@ namespace CouchbaseConnect2014.iOS.Renderers
             var label = new UILabel {
                 Text = viewModel.Time.ToString ("h:mm"),
                 TextColor = textColor,
-                Frame = new RectangleF {
+                Frame = new CGRect {
                     X = Padding + TitleWidth,
                     Y = TimeTop,
                     Width = TimeWidth,
@@ -169,7 +169,7 @@ namespace CouchbaseConnect2014.iOS.Renderers
             var label = new UILabel {
                 Text = viewModel.Time.ToString ("tt"),
                 TextColor = textColor,
-                Frame = new RectangleF {
+                Frame = new CGRect {
                     X = Padding + TitleWidth + TimeWidth,
                     Y = TimeTop + 16,
                     Width = 16,

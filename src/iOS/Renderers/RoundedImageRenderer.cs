@@ -1,13 +1,13 @@
-﻿using System;
-using System.Drawing;
+using System;
+using CoreGraphics;
 using Xamarin.Forms.Platform.iOS;
-using MonoTouch.UIKit;
-using MonoTouch.CoreGraphics;
+using UIKit;
+using CoreGraphics;
 using Xamarin.Forms;
 using System.ComponentModel;
 using CouchbaseConnect2014.iOS;
 using CouchbaseConnect2014.Controls;
-using MonoTouch.Foundation;
+using Foundation;
 using System.Reflection;
 
 [assembly: ExportRendererAttribute(typeof(RoundedImageView), typeof(RoundedImageRenderer))]
@@ -22,7 +22,7 @@ namespace CouchbaseConnect2014.iOS
 		protected override void OnElementChanged (ElementChangedEventArgs<Image> e)
 		{
 			base.OnElementChanged (e);
-			base.SetNativeControl (new UIImageView (RectangleF.Empty) {
+			base.SetNativeControl (new UIImageView (CGRect.Empty) {
 				ContentMode = UIViewContentMode.ScaleAspectFit,
 				ClipsToBounds = true,
 				Layer = {

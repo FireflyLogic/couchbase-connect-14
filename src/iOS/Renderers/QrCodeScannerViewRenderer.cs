@@ -1,12 +1,13 @@
-﻿using System;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using System;
+using Foundation;
+using UIKit;
 using ScanditSDK;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using ZXing;
-using System.Drawing;
+using CoreGraphics;
 using CouchbaseConnect2014.Controls;
+using System.Drawing;
 
 [assembly: ExportRenderer(typeof(CouchbaseConnect2014.QrCodeScannerView), typeof(CouchbaseConnect2014.iOS.QrCodeScannerViewRenderer))]
 
@@ -22,10 +23,10 @@ namespace CouchbaseConnect2014.iOS
 			var viewController = ViewController;
 
 			// Get the device's display for width and height.
-			RectangleF screen = UIScreen.MainScreen.Bounds;
+			CGRect screen = UIScreen.MainScreen.Bounds;
 
 			// create top label - "Scan QR code to swap contact info"
-			var topLabel = new UILabel (new RectangleF (
+			var topLabel = new UILabel (new CGRect (
 				0, 
 				0, 
 				screen.Width, 
@@ -62,16 +63,16 @@ namespace CouchbaseConnect2014.iOS
 
 			// Set the scanner size 
 			scanner.Size = new SizeF(
-				screen.Size.Width, 
-				screen.Size.Height * 0.45f
+                (float)screen.Size.Width, 
+                (float)screen.Size.Height * 0.45f
 			);
-			scanner.View.Bounds = new RectangleF(
+			scanner.View.Bounds = new CGRect(
 				0, 
 				topLabel.Frame.Height, 
 				screen.Size.Width, 
 				screen.Size.Height * 0.45f
 			);
-			scanner.View.Frame = new RectangleF(
+			scanner.View.Frame = new CGRect(
 				0, 
 				topLabel.Frame.Height, 
 				screen.Size.Width, 
@@ -85,7 +86,7 @@ namespace CouchbaseConnect2014.iOS
 			scanner.StartScanning ();
 
 			/* Creating the lower label - "Share your contact info" */
-			var lowerLabel = new UILabel (new RectangleF (
+			var lowerLabel = new UILabel (new CGRect (
 				0, 
 				(scanner.View.Frame.Location.Y + scanner.View.Frame.Height), 
 				screen.Width, 
@@ -129,14 +130,14 @@ namespace CouchbaseConnect2014.iOS
 
 			var result = barcodeWriter.Write (qrContent);
 
-			var qrImageView = new UIImageView (new RectangleF (
+			var qrImageView = new UIImageView (new CGRect (
 				0, 
 				(lowerLabel.Frame.Location.Y + lowerLabel.Frame.Height), 
 				result.Size.Width, 
 				result.Size.Height
 			));
 			qrImageView.Image = result;
-			qrImageView.Center = new PointF (
+			qrImageView.Center = new CGPoint (
 				view.Center.X, 
 				qrImageView.Center.Y
 			);

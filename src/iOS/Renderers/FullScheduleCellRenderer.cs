@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms;
 using CouchbaseConnect2014.Views;
 using CouchbaseConnect2014.iOS.Renderers;
-using MonoTouch.UIKit;
+using UIKit;
 using CouchbaseConnect2014.ViewModels;
 using CouchbaseConnect2014.ValueConverters;
 using System.Globalization;
-using System.Drawing;
+using CoreGraphics;
 using System.ComponentModel;
 
 [assembly: ExportRenderer (typeof(FullScheduleCell), typeof(FullScheduleCellRenderer))]
@@ -20,7 +20,7 @@ namespace CouchbaseConnect2014.iOS.Renderers
         const int TitleWidth = 224;
         const int TitleHeight = 58;
 
-        public override UITableViewCell GetCell (Cell item, UITableView tv)
+        public override UITableViewCell GetCell (Cell item, UITableViewCell reusableItem, UITableView tv)
         {
             var viewModel = (FullScheduleCellViewModel)item.BindingContext;
             var cellTableViewCell = tv.DequeueReusableCell ("cell") as CellTableViewCell
@@ -67,7 +67,7 @@ namespace CouchbaseConnect2014.iOS.Renderers
             var label = new UILabel {
                 Text = viewModel.Title,
                 TextColor = textColor,
-                Frame = new RectangleF {
+                Frame = new CGRect {
                     X = Padding,
                     Y = Padding,
                     Width = TitleWidth,
@@ -86,7 +86,7 @@ namespace CouchbaseConnect2014.iOS.Renderers
             var label = new UILabel {
                 Text = viewModel.Location.ToUpper (),
                 TextColor = textColor,
-                Frame = new RectangleF {
+                Frame = new CGRect {
                     X = Padding,
                     Y = Padding + TitleHeight,
                     Width = TitleWidth / 2,
@@ -103,7 +103,7 @@ namespace CouchbaseConnect2014.iOS.Renderers
             var label = new UILabel {
 				Text = new TrackValueConverter().Convert(viewModel.Track, typeof(string), null, CultureInfo.CurrentCulture) as string,
                 TextColor = textColor,
-                Frame = new RectangleF {
+                Frame = new CGRect {
                     X = Padding + TitleWidth / 2,
                     Y = Padding + TitleHeight,
                     Width = TitleWidth / 2,
@@ -122,7 +122,7 @@ namespace CouchbaseConnect2014.iOS.Renderers
         {
             const int ButtonWidth = 50;
             var button = new UIButton {
-                Frame = new RectangleF {
+                Frame = new CGRect {
                     X = cell.Bounds.Width - ButtonWidth,
                     Y = 0,
                     Height = cell.Bounds.Height,

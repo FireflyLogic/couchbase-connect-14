@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using System;
 using System.Drawing;
 
@@ -13,7 +13,7 @@ namespace CouchbaseConnect2014.Tests
 			var input = new SizeF (500, 500);
 			var output = ImageCropLogic.GetLargestSquareFromRectangle (input);
 
-			var target = new RectangleF (0, 0, 500, 500);
+            var target = new RectangleF (0, 0, 500, 500);
 
 			Assert.AreEqual (target, output);
 		}
@@ -21,10 +21,10 @@ namespace CouchbaseConnect2014.Tests
 		[Test]
 		public void CanGetSquareFromTallImage ()
 		{
-			var input = new SizeF (900, 2400);
+            var input = new SizeF (900, 2400);
 			var output = ImageCropLogic.GetLargestSquareFromRectangle (input);
 
-			var target = new RectangleF (0, 750, 900, 900);
+            var target = new RectangleF (0, 750, 900, 900);
 
 			Assert.AreEqual (target, output);
 		}
@@ -32,10 +32,10 @@ namespace CouchbaseConnect2014.Tests
 		[Test]
 		public void CanGetSquareFromWideImage ()
 		{
-			var input = new SizeF (2400, 900);
+            var input = new SizeF (2400, 900);
 			var output = ImageCropLogic.GetLargestSquareFromRectangle (input);
 
-			var target = new RectangleF (750, 0, 900, 900);
+            var target = new RectangleF (750, 0, 900, 900);
 
 			Assert.AreEqual (target, output);
 		}
