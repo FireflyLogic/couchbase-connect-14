@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using Xamarin.Forms.Platform.iOS;
 using CouchbaseConnect2014.iOS;
 using CouchbaseConnect2014.Controls;
 using System.ComponentModel;
 using Xamarin.Forms;
-using MonoTouch.UIKit;
-using System.Drawing;
+using UIKit;
+using CoreGraphics;
 
 [assembly: ExportRenderer (typeof (CommentEditor), typeof (CommentEditorRenderer))]
 namespace CouchbaseConnect2014.iOS
@@ -106,7 +106,7 @@ namespace CouchbaseConnect2014.iOS
 
 				if (parentScrollView != null) 
 				{
-					var newOffset = new PointF (0, parentScrollView.ContentOffset.Y + 210);
+					var newOffset = new CGPoint (0, parentScrollView.ContentOffset.Y + 210);
 					parentScrollView.SetContentOffset (newOffset, true);
 				}
 			}

@@ -1,7 +1,7 @@
-﻿using System;
-using System.Drawing;
+using System;
+using CoreGraphics;
 using System.Threading.Tasks;
-using MonoTouch.UIKit;
+using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using Xamarin.Media;

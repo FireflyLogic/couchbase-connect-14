@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms;
 using CouchbaseConnect2014.iOS.Renderers;
-using MonoTouch.UIKit;
+using UIKit;
 using CouchbaseConnect2014.Controls;
 
 [assembly: ExportRenderer (typeof(MenuCell), typeof(MenuCellRenderer))]
@@ -13,10 +13,10 @@ namespace CouchbaseConnect2014.iOS.Renderers
     {
         UIView _selectedBackgroundView;
 
-        public override UITableViewCell GetCell (Cell item, UITableView tv)
+        public override UITableViewCell GetCell (Cell item, UITableViewCell reusableItem, UITableView tv)
         {
             tv.SeparatorStyle = UITableViewCellSeparatorStyle.None;
-            var cell = base.GetCell (item, tv);
+            var cell = base.GetCell (item, reusableItem, tv);
 
             if (_selectedBackgroundView == null) {
                 _selectedBackgroundView = new UIView(cell.SelectedBackgroundView.Bounds);

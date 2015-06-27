@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using CouchbaseConnect2014.Views;
 using CouchbaseConnect2014.iOS;
-using MonoTouch.UIKit;
-using System.Drawing;
+using UIKit;
+using CoreGraphics;
 using CouchbaseConnect2014.Controls;
 
 [assembly: ExportRenderer (typeof (RateButton), typeof (RateButtonRenderer))]

@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using Xamarin.Forms;
 using CouchbaseConnect2014;
 using CouchbaseConnect2014.iOS;
 using CouchbaseConnect2014.Views;
 using Xamarin.Forms.Platform.iOS;
-using MonoTouch.UIKit;
-using System.Drawing;
+using UIKit;
+using CoreGraphics;
 using System.Threading.Tasks;
 using System.Threading;
 
@@ -38,7 +38,7 @@ namespace CouchbaseConnect2014.iOS
 		}
 
 		// There might be a better place for this, but I don't know where it is
-		public override void Draw(RectangleF rect)
+		public override void Draw(CGRect rect)
 		{
 			var csb = (CustomSearchBar) Element;
 			if (csb.BarTint != null)

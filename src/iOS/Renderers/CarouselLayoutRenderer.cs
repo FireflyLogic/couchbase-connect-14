@@ -1,10 +1,9 @@
-﻿using System;
+using System;
 using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms;
-using System.Diagnostics;
-using MonoTouch.UIKit;
+using UIKit;
 using System.ComponentModel;
-using System.Drawing;
+using CoreGraphics;
 using CouchbaseConnect2014.Controls;
 using CouchbaseConnect2014.iOS.Renderers;
 
@@ -49,14 +48,14 @@ namespace CouchbaseConnect2014.iOS.Renderers
         {
             if (Element == null) return;
 
-            _native.SetContentOffset (new PointF 
+            _native.SetContentOffset (new CGPoint 
                 (_native.Bounds.Width * 
                     Math.Max(0, ((CarouselLayout)Element).SelectedIndex), 
                     _native.ContentOffset.Y), 
                 animate);
         }
 
-        public override void Draw (RectangleF rect)
+        public override void Draw (CGRect rect)
         {
             base.Draw (rect);
             ScrollToSelection (false);

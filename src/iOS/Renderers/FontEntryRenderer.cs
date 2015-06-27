@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using Xamarin.Forms.Platform.iOS;
-using MonoTouch.UIKit;
+using UIKit;
 using Xamarin.Forms;
 using CouchbaseConnect2014.Controls;
 using CouchbaseConnect2014.iOS;
-using System.Drawing;
+using CoreGraphics;
 using System.ComponentModel;
 
 [assembly: ExportRenderer (typeof (FontEntry), typeof (FontEntryRenderer))]
@@ -84,7 +84,7 @@ namespace CouchbaseConnect2014.iOS
 			var height = Math.Max(Bounds.Height,
 				new UITextField {Font = Control.Font}.IntrinsicContentSize.Height);
 
-			Control.Frame = new RectangleF(0.0f, 0.0f, (float) Element.Width, height);
+            Control.Frame = new CGRect(0.0f, 0.0f, (nfloat) Element.Width, (nfloat)height);
 
 			Element.HeightRequest = height;
 		}
